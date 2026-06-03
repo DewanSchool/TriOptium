@@ -22,9 +22,9 @@ public class GreetingResource {
         return "Hello from Quarkus REST";
     }
 
-    @POST
-    public String text(){
-        this.textService.createText();
-        return  "Created";
-    }
+//    @POST
+//    public String text(){
+//        this.textService.ingest(1L);
+//        return  "Created";
+//    }
 }
