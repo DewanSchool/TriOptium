@@ -29,4 +29,8 @@ public class TextService {
         return embeddingModel.embed(text).content().vectorAsList();
     }
 
+    public void test(){
+        return embeddingModel.
+    }
+
 }
