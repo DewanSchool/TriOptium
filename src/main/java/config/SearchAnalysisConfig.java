@@ -10,7 +10,7 @@ public class SearchAnalysisConfig implements ElasticsearchAnalysisConfigurer {
 
     @Override
     public void configure(ElasticsearchAnalysisConfigurationContext context) {
-        context.analyzer("dutch").custom()
+        context.analyzer("english").custom()
                 .tokenizer("standard")
                 .tokenFilters("asciifolding", "lowercase", "porter_stem");
 
