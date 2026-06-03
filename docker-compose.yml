@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    ports:
+    # This means you can connect to 'localhost:15432' from your computer
+    # and it will patch it through to the container-port 5432
+      - "15432:5432"
+    environment: # So the database-superuser is called postgres/admin# The account our application will use is configured in init.sql
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: mydb
+    volumes: # Required volume: creates the initial db and user
+      - project_triopium_db_data:/var/lib/postgresql/data"
+
+volumes:
+  project_triopium_db_data:
