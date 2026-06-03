@@ -1,11 +1,10 @@
 package org.acme;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.acme.application.TextService;
+
+import java.util.List;
 
 @Path("/hello")
 public class GreetingResource {
@@ -26,5 +25,12 @@ public class GreetingResource {
     public String text(){
         this.textService.createText();
         return  "Created";
+    }
+
+    @PATCH
+//    @Path("/embed")
+    public List<Float> embed(){
+        String text = "This is embeded text";
+        return this.textService.embedText(text);
     }
 }
