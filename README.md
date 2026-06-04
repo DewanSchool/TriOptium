@@ -60,3 +60,7 @@ If you want to learn more about building native executables, please consult <htt
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+
+swagger
+http://localhost:8080/q/swagger-ui/#/Citizen%20Profile%20Resource/post_api_addresses
