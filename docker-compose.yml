@@ -8,7 +8,7 @@ services:
     environment: # So the database-superuser is called postgres/admin# The account our application will use is configured in init.sql
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: mydb
+      POSTGRES_DB: pg_vector_db
     volumes: # Required volume: creates the initial db and user
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - project_triopium_db_data:/var/lib/postgresql/data"
